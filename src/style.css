@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Inter Light";
+    src:
+      url("/fonts/Inter/Inter-Light.woff2") format("woff2"),
+      url("/fonts/Inter/Inter-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Inter Regular";
+    src:
+      url("/fonts/Inter/Inter-Regular.woff2") format("woff2"),
+      url("/fonts/Inter/Inter-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Inter Medium";
+    src:
+      url("/fonts/Inter/Inter-Medium.woff2") format("woff2"),
+      url("/fonts/Inter/Inter-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Inter SemiBold";
+    src:
+      url("/fonts/Inter/Inter-SemiBold.woff2") format("woff2"),
+      url("/fonts/Inter/Inter-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Inter Bold";
+    src:
+      url("/fonts/Inter/Inter-Bold.woff2") format("woff2"),
+      url("/fonts/Inter/Inter-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+html {
+  @apply scroll-pt-14 scroll-smooth;
+}
+
+body {
+  @apply font-inter-regular text-primary-text;
+
+  .button {
+    @apply inline-flex items-center justify-center rounded-lg font-inter-semibold text-base outline-none transition-colors disabled:pointer-events-none disabled:opacity-30;
+  }
+  .button-primary {
+    @apply bg-primary text-white hover:bg-hovered focus:bg-focused focus:shadow-shadow-primary disabled:shadow-shadow-disabled;
+  }
+  .button-secondary {
+    @apply border border-solid border-stroke bg-primary-bg text-primary-text shadow-shadow-small hover:bg-secondary-bg focus:bg-secondary-bg focus:shadow-shadow-secondary disabled:shadow-shadow-disabled;
+  }
+
+  .page-title {
+    @apply font-inter-semibold text-3xl md:text-5xl;
+  }
+  .widget-title {
+    @apply font-inter-semibold text-2xl md:text-4xl;
+  }
+  .form-title {
+    @apply font-inter-semibold text-2xl md:text-3xl;
+  }
+  .item-title {
+    @apply font-inter-semibold text-xl md:text-2xl;
+  }
+  .page-subtitle {
+    @apply text-base md:text-xl;
+  }
+  .copy {
+    @apply text-sm md:text-base;
+  }
+  .menu-link {
+    @apply cursor-pointer font-inter-semibold text-base;
+  }
+  .number {
+    @apply font-inter-semibold text-5xl text-primary md:text-[60px] md:leading-[78px];
+  }
+
+  .image {
+    @apply h-[443px] w-full max-w-[400px] object-cover md:h-[500px] md:w-[300px] md:max-w-none lg:w-[430px] xl:h-[640px] xl:w-[517px];
+  }
+}
