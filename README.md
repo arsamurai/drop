@@ -10,7 +10,7 @@
 #### Startup
 1. Clone application:
    ```shell
-   git clone _______REPO________
+   git clone https://github.com/arsamurai/drop.git
    ```
 2. Go to application folder:
    ```shell
