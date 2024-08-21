@@ -1,23 +1,27 @@
 {
-  "name": "drop-landing",
+  "name": "profitsale_corporate_site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "preview": "vite preview",
     "prettier:format": "prettier --write './**/*.{html,ts}' --config .prettierrc"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "prettier": "^3.3.1",
-    "tailwindcss": "^3.4.4",
-    "tw-elements": "^2.0.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vite-plugin-static-copy": "^1.0.6"
   },
   "dependencies": {
-    "prettier-plugin-tailwindcss": "^0.6.2"
+    "@types/node": "^22.3.0",
+    "swiper": "^11.1.9",
+    "tw-elements": "^2.0.0"
   }
 }

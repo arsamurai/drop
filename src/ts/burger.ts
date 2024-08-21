@@ -1,20 +1,16 @@
-const setModalState = (
-  btn: HTMLElement | null,
-  menu: HTMLElement | null,
-  activate: boolean,
-): void => {
+const setModalState = (btn: HTMLElement, menu: HTMLElement, activate: boolean): void => {
   const action = activate ? "add" : "remove"
 
   btn?.classList[action]("active")
   menu?.classList[action]("active")
 }
 
-const burger = document.querySelector("[data-burger]") as HTMLElement | null
-const menu = document.querySelector("[data-menu]") as HTMLElement | null
-const menuLinks = menu?.querySelectorAll(".menu-link")
+const burger = document.getElementById("burger") as HTMLButtonElement
+const menu = document.getElementById("menu") as HTMLElement
+const menuLinks = menu?.querySelectorAll("[data-menu-link]")
 
 burger?.addEventListener("click", ({ currentTarget }) => {
-  const target = currentTarget as HTMLElement | null
+  const target = currentTarget as HTMLElement
   const isActiveMenu = target?.classList?.contains("active")
 
   setModalState(target, menu, !isActiveMenu)
