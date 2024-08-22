@@ -510,12 +510,19 @@
       </section>
 
       <!-- PROFITSALE BANER -->
-      <section id="profitsale-baner" class="relative py-[51px] text-center md:py-[61px]">
-        <img
-          src="/landing/images/profitsale-baner-bg.png"
-          alt="profitsale-baner-img"
-          class="absolute inset-0 z-[-1] size-full object-cover"
-        />
+      <section
+        id="profitsale-baner"
+        class="relative overflow-hidden bg-primary py-[51px] text-center md:py-[61px]"
+      >
+        <div class="absolute inset-0 h-full -translate-y-[100%]">
+          <div class="animate-move-net h-full w-[200%] sm:w-[120%]">
+            <img
+              src="/landing/images/net.png"
+              alt="profitsale-baner-img"
+              class="block w-[200%] object-contain opacity-30 sm:w-[120%]"
+            />
+          </div>
+        </div>
         <div class="container">
           <span
             class="x:leading-[77px] font-inter-semibold text-[48px] lowercase leading-[58px] text-white sm:text-[56px] sm:uppercase sm:leading-[67px] xl:text-[64px]"

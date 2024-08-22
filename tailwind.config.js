@@ -1,3 +1,5 @@
+import { transform } from "typescript"
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./**/*.{html,ts}", "./node_modules/tw-elements/js/**/*.js"],
@@ -17,6 +19,28 @@ export default {
       "inter-medium": ["Inter Medium", "sans-serif"],
       "inter-semibold": ["Inter Semibold", "sans-serif"],
       "inter-bold": ["Inter Bold", "sans-serif"],
+    },
+    keyframes: {
+      "move-bg-down": {
+        "0%": {
+          transform: "translate(0, 0)",
+          opacity: "0",
+        },
+        "10%": {
+          opacity: "1",
+        },
+        "90%": {
+          transform: "translate(-9%, 90%)",
+          opacity: "1",
+        },
+        "100%": {
+          transform: "translate(-10%, 100%)",
+          opacity: "0",
+        },
+      },
+    },
+    animation: {
+      "move-net": "move-bg-down 5s linear infinite",
     },
     extend: {
       colors: {
