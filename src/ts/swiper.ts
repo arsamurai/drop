@@ -1,5 +1,5 @@
 import Swiper from "swiper"
-import { Navigation, Pagination } from "swiper/modules"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
@@ -52,8 +52,29 @@ const swipers = {
         },
       },
     }),
+  partnersSwiper: () =>
+    new Swiper(".partners-swiper", {
+      slidesPerView: 2,
+      spaceBetween: 28,
+      loop: true,
+      autoplay: { delay: 3000 },
+      modules: [Pagination, Navigation, Autoplay],
+      navigation: {
+        nextEl: ".partners-swiper-button-next.swiper-button-next",
+        prevEl: ".partners-swiper-button-prev.swiper-button-prev",
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 3,
+        },
+        900: {
+          slidesPerView: 4,
+        },
+      },
+    }),
 }
 window.addEventListener("load", () => {
   swipers.topSwiper()
   swipers.articlesSwiper()
+  swipers.partnersSwiper()
 })
